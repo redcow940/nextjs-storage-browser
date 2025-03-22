@@ -1,7 +1,7 @@
 import { defineStorage } from "@aws-amplify/backend";
 
 export const storage = defineStorage({
-  name: "lokmat.com",
+  name: "storage-browser-test",
   access: (allow: any) => ({
     'media-readwritedelete/*': [allow.authenticated.to(['read', 'write', 'delete'])],
     'media-readonly/*': [allow.authenticated.to(['read'])],
