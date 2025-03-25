@@ -1,0 +1,39 @@
+{
+  "auth": {
+    "user_pool_id": "ap-south-1_gsAXRQFZr",
+    "aws_region": "ap-south-1",
+    "user_pool_client_id": "2lkfko0o750q9lcprdvbnne3a0",
+    "identity_pool_id": "ap-south-1:8a5e7c9f-0071-48e6-9e02-64e4a72d1d55",
+    "mfa_methods": [],
+    "standard_required_attributes": [
+      "email"
+    ],
+    "username_attributes": [
+      "email"
+    ],
+    "user_verification_types": [
+      "email"
+    ],
+    "mfa_configuration": "NONE",
+    "password_policy": {
+      "min_length": 8,
+      "require_lowercase": true,
+      "require_numbers": true,
+      "require_symbols": true,
+      "require_uppercase": true
+    },
+    "unauthenticated_identities_enabled": true
+  },
+  "storage": {
+    "aws_region": "ap-south-1",
+    "bucket_name": "lokmat-video-storage",
+    "buckets": [
+      {
+        "name": "lokmat-video-storage",
+        "bucket_name": "lokmat-video-storage",
+        "aws_region": "ap-south-1"
+      }
+    ]
+  },
+  "version": "1.3"
+}
