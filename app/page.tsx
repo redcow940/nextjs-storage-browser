@@ -12,7 +12,7 @@ import {
 import "@aws-amplify/ui-react-storage/styles.css";
 import "@aws-amplify/ui-react-storage/storage-browser-styles.css";
 
-import config from "../amplify_outputs.json";
+import config from "@/amplify_outputs.json";
 
 Amplify.configure(config);
 
@@ -22,6 +22,7 @@ function Example() {
     config: createAmplifyAuthAdapter({
       options: {
         defaultPrefixes: [
+          "videos",
           "media-readwritedelete/",
           "media-readonly/",
           "shared-folder-readwrite/",
