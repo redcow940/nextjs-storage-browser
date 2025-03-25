@@ -23,11 +23,6 @@ function Example() {
       options: {
         defaultPrefixes: [
           "videos",
-          "media-readwritedelete/",
-          "media-readonly/",
-          "shared-folder-readwrite/",
-          (identityId: string) => `protected-useronlyreadwritedelete/${identityId}/`,
-          (identityId: string) => `private-useronlyreadwritedelete/${identityId}/`,
         ],
       },
     }),
