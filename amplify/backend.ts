@@ -12,7 +12,6 @@ const backend = defineBackend({
 
 backend.addOutput({
   storage: {
-    aws_region: "ap-south-1",
     bucket_name: "lokmat-video-storage",
   },
 });
