@@ -13,6 +13,6 @@ const backend = defineBackend({
 backend.addOutput({
   storage: {
     aws_region: "ap-south-1",
-    bucket_name: "lokmats3",
+    bucket_name: "asera",
   },
 });
