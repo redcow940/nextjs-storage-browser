@@ -1,0 +1,30 @@
+/* body{background:url(https://lokmat.com/static/asera/background.jpg) no-repeat #fff; background-size:cover;} */
+[data-amplify-authenticator]{background-color:#fff; border:1px solid #ccc; height:540px; width:800px; position:relative; margin:0px auto 0px; top:calc((100vh - 540px) / 2);}
+.brandlogo{padding:40px 0px; margin:0px; text-align:center;}
+.brandlogo img{display:inline-block; height:60px; width:auto;}
+.info-container{display:flex; padding:0px 15px 15px; gap:15px; font-family:Tahoma, sans-serif;}
+.info-container .info-text{flex:1;}
+.info-container p{font-size:18px; line-height:24px;}
+.info-container p.title{font-size:22px; line-height:28px; font-weight:bold; margin-top:0px;}
+.info-container button.contactus{background:#047d95; color:#fff; text-align:center; font-weight: bold; border:0px; padding:9px; border-radius:4px; cursor:pointer; transition:all 250ms;  width:140px;}
+.info-container button.contactus:hover{background:#056}
+.info-container > form{flex:1; }
+.info-container > form fieldset{border:0px; padding:0px;}
+.info-container > form fieldset > legend{font-size:16px; line-height:32px; font-weight:bold; color:#047d95; border-bottom:2px solid #047d95; padding:2px 35px; margin-bottom:15px;}
+.info-container > form fieldset .amplify-field{display:flex; flex-direction:column; margin-bottom:20px;}
+.info-container > form fieldset .amplify-field label{font-size:16px; line-height:24px; padding-bottom:8px;}
+.info-container > form fieldset .amplify-field input{font-size:16px; line-height:24px; padding:6px 10px; box-shadow:rgba(0, 64, 77, 0.55) 0px 0px 0px 1.09798px;  border:0px;   }
+.info-container > form .amplify-button--primary{display:flex; justify-self: center; background:#047d95; color:#fff; text-align:center; font-weight: bold; border:0px; padding:9px; border-radius:4px; cursor:pointer; transition:all 250ms;  width:190px; justify-content:center; align-items:center;}
+.info-container > form .amplify-button--primary:hover{background:#056}
+
+@media(max-width:992px){
+   body{background-size:cover; background-position:center top; background-attachment: fixed;}
+   [data-amplify-authenticator]{width:100%; height: auto; top:20px;}
+   .info-container{flex-direction:column; padding-left:10px; padding-right:10px;}
+   .brandlogo{padding:20px 0px;}
+   .brandlogo img{height:40px; }
+   .info-container p{font-size:16px; line-height:22px; margin:10px 0px;}
+   .info-container .info-text .title{font-size:18px; line-height:24px;}
+   .forinfomation{float:left;}
+   .info-container button.contactus{float:right;}
+}
