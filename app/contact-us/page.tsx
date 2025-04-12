@@ -20,7 +20,7 @@ function Example() {
         email: '',
         subject: '',
         body: '',
-        to: 'sanjay.saini@lokmat.com', // 👈 Add this line
+        to: 'dvd@asera.co', // 👈 Add this line
       });
 
 
@@ -54,7 +54,7 @@ function Example() {
           email: '',
           subject: '',
           body: '',
-          to:'sanjay.saini@lokmat.com'
+          to:'dvd@asera.co'
         });
               // ⏳ Wait 5 seconds, then redirect
       setTimeout(() => {
