@@ -13,8 +13,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Lokmat Video Editors Portal",
-  description: "Created for Lokmat Video Editors",
+  title: "Asera",
+  description: "Asera",
 };
 
 export default function RootLayout({
