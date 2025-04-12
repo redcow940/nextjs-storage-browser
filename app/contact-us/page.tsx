@@ -64,7 +64,7 @@ function Example() {
         throw new Error(result.message || 'Error sending message');
       }
     } catch (error) {
-      setStatus({ message: "Error-0" || 'Error', type: 'error' });
+      setStatus({ message: 'Error-00', type: 'error' });
     }
   };
 
