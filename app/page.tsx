@@ -94,8 +94,8 @@ useEffect(() => {
       console.log('Signed in:', user);
       setIsSignedIn(true);
 
-      const attributes = await fetchUserAttributes();
-      setUserProfile(attributes.profile);
+      //const attributes = await fetchUserAttributes();
+      //setUserProfile(attributes.profile);
 
 // setIsSignedIn(true);
 
