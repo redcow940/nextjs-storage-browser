@@ -28,3 +28,8 @@
    .forinfomation{float:left;}
    .info-container button.contactus{float:right;}
 }
+
+.reader-mode .storage-browser__actions-menu,
+.reader-mode .storage-browser__upload-drop-zone {
+  display: none !important;
+}
