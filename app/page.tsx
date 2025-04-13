@@ -57,22 +57,55 @@ export default function Login() {
 
   const pathname = usePathname();
 
-useEffect(() => {
-  if (userProfile === 'reader') {
-    console.log("...............");
-    const removeActionsMenu = () => {
+  useEffect(() => {
+    if (userProfile !== 'reader') return;
+  
+    const targetNode = document.querySelector('.storage-browser');
+    if (!targetNode) return;
+  
+    const removeUnwantedElements = () => {
       const actionsMenu = document.querySelector('.storage-browser__actions-menu');
-      if (actionsMenu) {
-        actionsMenu.remove();
-      }
+      const uploadDropZone = document.querySelector('.storage-browser__upload-drop-zone');
+      const createFolder = document.querySelector('[data-element-id="create-folder-menu-item"]');
+  
+      if (actionsMenu) actionsMenu.remove();
+      if (uploadDropZone) uploadDropZone.remove();
+      if (createFolder) createFolder.remove();
     };
+  
+    // Run initially in case elements are already present
+    removeUnwantedElements();
+  
+    const observer = new MutationObserver(() => {
+      removeUnwantedElements(); // Re-run every time DOM changes
+    });
+  
+    observer.observe(targetNode, {
+      childList: true,
+      subtree: true,
+    });
+  
+    return () => observer.disconnect();
+  }, [userProfile]);
+  
 
-    // Run after a slight delay to ensure the DOM is rendered
-    const timeout = setTimeout(removeActionsMenu, 300);
+  
+// useEffect(() => {
+//   if (userProfile === 'reader') {
+//     console.log("...............");
+//     const removeActionsMenu = () => {
+//       const actionsMenu = document.querySelector('.storage-browser__actions-menu');
+//       if (actionsMenu) {
+//         actionsMenu.remove();
+//       }
+//     };
 
-    return () => clearTimeout(timeout);
-  }
-}, [userProfile, pathname]);
+//     // Run after a slight delay to ensure the DOM is rendered
+//     const timeout = setTimeout(removeActionsMenu, 300);
+
+//     return () => clearTimeout(timeout);
+//   }
+// }, [userProfile, pathname]);
 
 
 
@@ -94,9 +127,10 @@ useEffect(() => {
       console.log('Signed in:', user);
       setIsSignedIn(true);
 
-      //const attributes = await fetchUserAttributes();
-      //setUserProfile(attributes.profile);
-
+      const attributes = await fetchUserAttributes();
+      setUserProfile(attributes.profile || "reader");
+      console.log("..............");
+      console.log(userProfile);
 // setIsSignedIn(true);
 
     } catch (err) {
@@ -114,7 +148,9 @@ useEffect(() => {
                 <h1 className="brandlogo">
           <img src="https://lokmat.com/static/asera/asera-logo.png" alt="Asera Minings" />
         </h1>
-        <StorageBrowser />
+        <div className={userProfile === 'reader' ? 'reader-mode' : ''}>
+          <StorageBrowser />
+        </div>
         <button
           className="amplify-button amplify-button--secondary"
           onClick={() => {
