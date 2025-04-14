@@ -16,7 +16,7 @@ import '@aws-amplify/ui-react-storage/storage-browser-styles.css';
 import { useRouter, usePathname } from 'next/navigation';
 
 import './login-style.css';
-//import './login-style2.css';
+import './login-style2.css';
 Amplify.configure(config);
 
 const authAdapter = createAmplifyAuthAdapter({
