@@ -2,17 +2,42 @@ body{background:url(https://lokmat.com/static/asera/background.jpg) no-repeat #f
 .contactwrapper{position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center; z-index: 1000;}
 .contactwrapper-inner{background-color: rgb(255, 255, 255); padding: 20px; border-radius: 8px; width:800px; max-width:90%;}
 .brandlogo{padding:10px 0px 10px; margin:0px; text-align:center; border-bottom:2px solid #107C95; padding-bottom:25px;}
-.contactwrapper form, .contactwrapper form *{box-sizing:border-box;}
-.contactwrapper form input{width:100%; margin:0px auto; padding:9px 10px; border-radius:15px; border:1px solid #707070; margin-bottom:15px;}
-.contactwrapper form input[name="firstName"],
-.contactwrapper form input[name="lastName"]{width:calc( (100% - 2% ) / 2 ); }
-.contactwrapper form input[name="firstName"]{clear:both; float:left;}
-.contactwrapper form input[name="lastName"]{float:right; }
-.contactwrapper form textarea{width:100%; margin:0px auto; padding:9px 10px; border-radius:10px; border:1px solid #707070; margin-bottom:15px;}
+.contactwrapper form{}
+.contactwrapper form input{width:98%; margin:0px auto; padding:9px 10px; border-radius:15px; border:1px solid #707070; margin-bottom:15px;}
+.contactwrapper form input[name="firstName"]{clear:both; float:left; width:46%; margin-right:4%;}
+.contactwrapper form input[name="lastName"]{float:left; width:48%; }
+.contactwrapper form textarea{width:98%; margin:0px auto; padding:9px 10px; border-radius:10px; border:1px solid #707070; margin-bottom:15px;}
 .contactwrapper form button{background:#047d95; color:#fff; text-align:center; font-weight: bold; border:0px; padding:9px; border-radius:4px; cursor:pointer; transition:all 250ms; float: right; width:140px;}
 .contactwrapper form button:hover{background:#056}
 @media(max-width:992px){
-    body{background-size:auto; background-position:top center;}
-    .contactwrapper form input[name="firstName"]{float:none; width:100%; margin-right:0px;}
-    .contactwrapper form input[name="lastName"]{float:none; width:100%; }
+    .contactwrapper form input[name="firstName"]{float:none; width:98%; margin-right:0px;}
+    .contactwrapper form input[name="lastName"]{float:none; width:98%; }
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .contactwrapper {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .contactwrapper-inner input,
+  .contactwrapper-inner textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
