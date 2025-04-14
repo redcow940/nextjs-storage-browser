@@ -1,56 +1,25 @@
+  [data-amplify-authenticator][data-variation=modal]{background:url(https://lokmat.com/static/asera/background.jpg) no-repeat #fff; background-size:cover;}
+[data-amplify-container]{background-color:#fff; border:1px solid #ccc;}
+[data-amplify-authenticator] [data-amplify-container]{display:flex; flex-direction:column;}
+[data-amplify-container] .info-container{padding:10px;}
+.info-container p{font-size:18px; line-height:24px;}
+.info-container p.title{font-size:22px; line-height:28px; font-weight:bold; margin-top:0px;}
+.info-container button.contactus{background:#047d95; color:#fff; text-align:center; font-weight: bold; border:0px; padding:9px; border-radius:4px; cursor:pointer; transition:all 250ms; float: right; width:140px;}
+.info-container button.contactus:hover{background:#056}
+.brandlogo{padding:10px 0px 10px; margin:0px; text-align:center;}
+.forinfomation{float:left;}
+[data-amplify-container] [data-amplify-router]{clear:both; padding-top:40px; border:0px; box-shadow:none;}
+[data-amplify-authenticator] [data-amplify-form]{padding:0px 20px 20px;}
 
-[data-amplify-authenticator][data-variation=modal] { background:url(https://lokmat.com/static/asera/background.jpg) no-repeat #fff; background-size:cover}
-[data-amplify-container] { background-color:#fff; border:1px solid #ccc; padding:15px;}
-[data-amplify-authenticator] [data-amplify-container] { display:flex; flex-direction:column}
-[data-amplify-container] .info-container { padding:10px; padding-bottom:30px;}
-.info-container button.contactus { float:right}
-.brandlogo { padding:10px 0}
-.forinfomation { float:left}
-[data-amplify-container] [data-amplify-router] { clear:both; padding-top:40px; border:0; box-shadow:none}
-[data-amplify-authenticator] [data-amplify-form] { padding:0 20px 20px}
-
-@media(min-width:30rem){ 
-    .info-container button.contactus { width:175px; float:none }
-    [data-amplify-authenticator] [data-amplify-container] { width:800px; flex-direction:column; box-shadow:0 0 9px 8px rgba(0, 0, 0, .2) }
-    .info-container { display:flex }
-    .forinfomation { float:none }
-    [data-amplify-container] .info-container { width:100% }
-    [data-amplify-container] .info-container .info-text { width:50%; }
-    [data-amplify-container] [data-amplify-router] { width:50% }
+@media(min-width: 30rem){
+    .info-container button.contactus{width:175px; float:none;}
+    [data-amplify-authenticator] [data-amplify-container] {width:800px; flex-direction:column; box-shadow:0px 0px 9px 8px rgba(0, 0, 0, 0.2);}
+    .info-container{display:flex;}
+    .forinfomation{float:none;}
+    [data-amplify-container] .info-container{width:100%;}
+    [data-amplify-container] .info-container .info-text{width:50%; padding-top:45px;}
+    [data-amplify-container] [data-amplify-router]{width:50%; }
 }
-
-@media(max-width:768px) { 
-    .amplify-label { display:none }
-}
-
-[data-amplify-authenticator] { background-color:#fff; border:1px solid #ccc; height:540px; width:800px; position:relative; margin:0 auto; top:calc((100vh - 540px) / 2)}
-.brandlogo { padding:20px 0; margin:0; text-align:center}
-.brandlogo img { display:inline-block; height:60px; width:auto}
-.info-container { display:flex; padding:0 15px 15px; gap:15px; font-family:Tahoma, sans-serif}
-.info-container .info-text { flex:1 1; padding-top:10px;}
-.info-container p { font-size:18px; line-height:24px; }
-.info-container p.title { font-size:22px; line-height:28px; font-weight:700; margin-top:0}
-.info-container button.contactus { background:#047d95; color:#fff; text-align:center; font-weight:700; border:0; padding:9px; border-radius:4px; cursor:pointer; transition:all .25s; width:140px}
-.info-container button.contactus:hover { background:#056}
-.info-container>form { flex:1 1; box-shadow:0px 0px 12px 4px rgb(0 0 0 / 32%); border:1px solid #ffffff; padding:10px; border-radius:9px; overflow:hidden;}
-.info-container>form .title{text-align: center;}
-.info-container>form fieldset { border:0; padding:0}
-.info-container>form fieldset>legend { font-size:16px; line-height:32px; font-weight:700; color:#047d95; border-bottom:2px solid #047d95; padding:2px 35px; margin-bottom:15px;}
-.info-container>form fieldset .amplify-field { display:flex; flex-direction:column; margin-bottom:20px}
-.info-container>form fieldset .amplify-field label { font-size:16px; line-height:24px; padding-bottom:0px;}
-.info-container>form fieldset .amplify-field input { font-size:16px; line-height:24px; padding:6px 10px; box-shadow:0px 0px 0px 1.09798px rgba(0, 64, 77, .55); border:0px; border-radius:4px;}
-.info-container>form .amplify-button--primary { display:flex; justify-self:center; background:#047d95; color:#fff; text-align:center; font-weight:700; border:0px; padding:9px; border-radius:4px; cursor:pointer; transition:all .25s; width:190px; justify-content:center; align-items:center}
-.info-container>form .amplify-button--primary:hover { background:#056}
-
-@media(max-width:992px){ 
-    body { background-size:cover; background-position:top; background-attachment:fixed }
-    [data-amplify-authenticator] { width:100%; height:auto; top:20px }
-    .info-container { flex-direction:column; padding-left:10px; padding-right:10px }
-    .brandlogo { padding:20px 0 }
-    .brandlogo img { height:40px }
-    .info-container p { font-size:16px; line-height:22px; margin:10px 0 }
-    .info-container .info-text {padding-top:0px;}
-    .info-container .info-text .title { font-size:18px; line-height:24px }
-    .forinfomation { float:left }
-    .info-container button.contactus { float:right }
+@media(max-width:768px) {
+    .amplify-label{display:none;}
 }
